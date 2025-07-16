@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import Navbar from '../components/Navbar';
-import { FaCheckCircle } from 'react-icons/fa'; 
 import Price from '../components/Price';
 
 const plans = [

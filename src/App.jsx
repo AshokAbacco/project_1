@@ -19,8 +19,11 @@ import DashbordApi from './components/DashbordApi';
 import DashPricing from './components/DashPricing';
 import IntegraZapier from './components/IntegraZapier';
 import EmailValidator from './components/EmailValidator';
-
+import ValidEmailveri from './components/ValidEmailveri';
+import ApiValidationCards from './components/ApiValidationCards';
+import EmailPreview from './components/EmailPreview'
 function App() {
+
   return (
     <BrowserRouter>
       <Routes>
@@ -42,8 +45,9 @@ function App() {
         <Route path="/pricing-plan" element={<DashPricing/>} />
         <Route path="/zapire" element={<IntegraZapier/>} />
         <Route path="/email-validation" element={<EmailValidator/>} />
-
-        
+        <Route path="/validemail" element={<ValidEmailveri/>}/>
+        <Route path="/ApiValidationCards" element={<ApiValidationCards/>}/>
+        <Route path="/EmailPreview" element={<EmailPreview/>}/>
       </Routes>
     </BrowserRouter>
   );

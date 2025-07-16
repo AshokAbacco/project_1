@@ -31,28 +31,36 @@ function Dashboard() {
         <div className="right-section">
           <div className="credits desktop-only">
             <span className="credit-amount">5 credits</span>
-            <span className="info-icon"><FiInfo /></span>
+            <span className="info-icon"><FiInfo/></span>
           </div>
 
           <button className="buy-credits-btn desktop-only">Buy Credits</button>
 
-           <div className="profile" onClick={() => setIsDropdownOpen(!isDropdownOpen)}>
-              <div className="profile-initial">K</div>
-              <div className="arrow">▾</div>
+            <div className="dropdown">
+              <div
+                className="profile dropdown-toggle d-flex align-items-center"
+                onClick={() => setIsDropdownOpen(!isDropdownOpen)}
+                data-bs-toggle="dropdown"
+                aria-expanded={isDropdownOpen}
+              >
+                <div className="profile-initial">K</div>
+                 
+              </div>
 
-              {isDropdownOpen && (
-                <div className="dropdown-menu">
-                  <div className="dropdown-item mobile-only">
-                    <span>5 credits</span> <span className="info-icon"> i </span>
-                  </div>
-                  <div className="dropdown-item mobile-only">
-                    <button className="buy-credits-btn">Buy Credits</button>
-                  </div>
-                  <div className="dropdown-item">Account</div>
-                  <div className="dropdown-item">Settings</div>
-                  <div className="dropdown-item">Logout</div>
-                </div>
-              )}
+              <ul
+                className={`dropdown-menu ${isDropdownOpen ? "show" : ""}`}
+                style={{ right: 0, left: "auto" }}
+              >
+                <li className="dropdown-item mobile-only">
+                  <span>5 credits</span> <span className="info-icon"> i </span>
+                </li>
+                <li className="dropdown-item mobile-only">
+                  <button className="btn btn-sm btn-primary">Buy Credits</button>
+                </li>
+                <li className="dropdown-item">Account</li>
+                <li className="dropdown-item">Settings</li>
+                <li className="dropdown-item">Logout</li>
+              </ul>
             </div>
         </div>
       </div>
@@ -71,7 +79,7 @@ function Dashboard() {
                     <p className='icon-mail'><FaEnvelopeOpenText className="validate-icon" /></p>
                     <div className='validate-title-1'>
                       <p className="validate-title">
-                        Validate <FiInfo className="info-icon" />
+                        Validate 
                       </p>
                       <p><Link to="/results" className="view-results">View Results</Link></p>
                     </div>
@@ -106,7 +114,7 @@ function Dashboard() {
                     <p className='icon-mail'><FaEnvelopeOpenText className="validate-icon" /></p>
                     <div className='validate-title-1'>
                       <p className="validate-title">
-                        Score <FiInfo className="info-icon" />
+                        Score  
                       </p>
                       <p><Link to="/results" className="view-results">View Results</Link></p>
                     </div>
@@ -125,7 +133,7 @@ function Dashboard() {
                     <p className='icon-mail'><FiInbox  className="validate-icon" /></p>
                     <div className='validate-title-1'>
                       <p className="validate-title">
-                        Inbox & Server Test <FiInfo className="info-icon"/>
+                        Inbox & Server Test 
                       </p>
                       <p><Link to="/tools" className="view-results">View Inbox Results</Link></p>
                     </div>
@@ -151,14 +159,14 @@ function Dashboard() {
                     <p className='icon-mail'><FiActivity className="validate-icon" /></p>
                     <div className='validate-title-1'>
                       <p className="validate-title">
-                        Blacklist Monitor <FiInfo className="info-icon" />
+                        Blacklist Monitor 
                       </p>
                       <p><Link to="/results" className="view-results">SEE ALL</Link></p>
                     </div>
 
                   </div>
               
-                  <p class="custom-card-text"> <FiInfo className="info-icon" /> You don't have a monitor set up yet.</p>
+                  <p class="custom-card-text">  You don't have a monitor set up yet.</p>
                   <Link to="" className="btn score-btn" role="button">+ Add New Monitor</Link>
                 </div>
 
@@ -170,15 +178,15 @@ function Dashboard() {
                       <p className='icon-mail'><FiBarChart2 className="validate-icon" /></p>
                       <div className='validate-title-1'>
                         <p className="validate-title">
-                          Quick Stats <FiInfo className="info-icon" />
+                          Quick Stats 
                         </p>
                         <p><Link to="/results" className="view-results">View Results</Link></p>
                       </div>
 
                     </div>
                   
-                    <p class="custom-card-text"><FiInfo className="info-icon" /> We've removed 0 invalids from your contacts</p>
-                    <p class="custom-card-text"><FiInfo className="info-icon" /> We've removed 0 complainers, spamtraps and known abusers</p>
+                    <p class="custom-card-text"> We've removed 0 invalids from your contacts</p>
+                    <p class="custom-card-text"> We've removed 0 complainers, spamtraps and known abusers</p>
                     <p class="custom-card-text"><IoMdCheckmarkCircleOutline className="text-success" /> We've fixed 0 typos </p>
                   </div>
               </div>
@@ -189,7 +197,7 @@ function Dashboard() {
                   <p className='icon-mail'><BsPersonBoundingBox className="validate-icon" /> </p>
                   <div className='validate-title-1'>
                     <p className="validate-title">
-                      Email Finder <FiInfo className="info-icon" />
+                      Email Finder  
                     </p>
                     <p><Link to="/results" className="view-results">View Results</Link></p>
                   </div>
@@ -221,7 +229,7 @@ function Dashboard() {
                   <p className='icon-mail'><MdAlternateEmail className="validate-icon" /></p>
                   <div className='validate-title-1'>
                     <p className="validate-title">
-                      Domain Search <FiInfo className="info-icon" />
+                      Domain Search  
                     </p>
                     <p><Link to="/results" className="view-results">View Results</Link></p>
                   </div>
@@ -243,7 +251,7 @@ function Dashboard() {
                         <p className='icon-mail'><BsShieldCheck className="validate-icon" /></p>
                         <div className='validate-title-1'>
                           <p className="validate-title">
-                            DMARC Monitor <FiInfo className="info-icon" />
+                            DMARC Monitor  
                           </p>
                           <p><Link to="/results" className="view-results">See All | Upgrade now</Link></p>
                       </div>
@@ -259,7 +267,7 @@ function Dashboard() {
                         <p className='icon-mail'><AiOutlineFire className="validate-icon" /></p>
                         <div className='validate-title-1'>
                           <p className="validate-title">
-                            Warmup <FiInfo className="info-icon" />
+                            Warmup 
                           </p>
                           <p><Link to="/results" className="view-results">See All | Upgrade now</Link></p>
                       </div>

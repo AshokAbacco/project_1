@@ -14,7 +14,7 @@ function Signup() {
     e.preventDefault();
 
     try {
-      const res = await fetch('http://localhost:3000/signup', {
+      const res = await fetch('http://localhost:8000/signup', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ name, email, password }),

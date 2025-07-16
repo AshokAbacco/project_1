@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import Pricing from '../pages/Pricing';
- 
 import Footer from './Footer';
 
 // FAQ Component

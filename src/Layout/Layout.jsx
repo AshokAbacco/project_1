@@ -21,13 +21,13 @@ function Sidebar( {children} ) {
         <ul className="nav1">
           <li className="nav-item"><Link to="/dashboard" className="nav-link">Dashboard</Link></li>
           <li className="nav-item"><Link to="/validate" className="nav-link">Validate</Link></li>
-          <li className="nav-item"><Link to="/score" className="nav-link">Score</Link></li>
+          {/* <li className="nav-item"><Link to="/score" className="nav-link">Score</Link></li> */}
           <li className="nav-item"><Link to="/email-finder" className="nav-link">Email Finder</Link></li>
           <li className="nav-item"><Link to="/wermup" className="nav-link">Warmup</Link></li>
           <li className="nav-item"><Link to="/tools" className="nav-link">Tools</Link></li>
           <li className="nav-item"><Link to="/integrations" className="nav-link">Integrations</Link></li>
           <li className="nav-item"><Link to="/api" className="nav-link">API</Link></li>
-          <li className="nav-item"><Link to="/usage" className="nav-link">Usage</Link></li>
+          {/* <li className="nav-item"><Link to="/usage" className="nav-link">Usage</Link></li> */}
           <li className="nav-item"><Link to="/pricing-plan" className="nav-link">Pricing & Plans</Link></li>
         </ul>
       </div>
