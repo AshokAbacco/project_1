@@ -1,29 +1,39 @@
-import React from 'react'
+import React, {useEffect} from 'react'
 import Navbar from '../components/Navbar';
 import { Link } from 'react-router-dom';
 import Paidplans from '../components/Paidplans';
 import Footer from '../components/Footer';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 function ListValidation() {
+    useEffect(() => {
+    AOS.init({
+      duration: 1000, // animation duration (in ms)
+      once: true      // animation happens only once
+    });
+  }, []);
   return (
     <div>
       <Navbar/>
         <section className="list-validation-section">
-            <div className="container">
-                <p className="tagline"> <i className="bi bi-card-checklist"></i> List verifications</p>
-                <h1>Bulk Contact Data Validation</h1>
-                <p className="subtext">
-                Protect your sender reputation keeping your lists free from spam traps, bounces, disposable and catch-all emails.
-                </p>
+            <div data-aos="zoom-in-down">
+                <div className="container">
+                    <p className="tagline"> <i className="bi bi-card-checklist"></i> List verifications</p>
+                    <h1>Bulk Contact Data Validation</h1>
+                    <p className="subtext">
+                    Protect your sender reputation keeping your lists free from spam traps, bounces, disposable and catch-all emails.
+                    </p>
 
-                <Link to="/email-validation" className="cta-button">Try it free →</Link>
-                <p className="no-credit">No credit card required</p>
+                    <Link to="/email-validation" className="cta-button">Try it free →</Link>
+                    <p className="no-credit">No credit card required</p>
 
-                <div className="integration-line" />
+                    <div className="integration-line" />
 
-                <p className="integration-text">Integrates with your favorite tools</p>
-                <div className="tools-logos">
-                    <img src="https://mails.so/images/integrations.png" alt="" />
+                    <p className="integration-text">Integrates with your favorite tools</p>
+                    <div className="tools-logos">
+                        <img src="https://mails.so/images/integrations.png" alt="" />
+                    </div>
                 </div>
             </div>
         </section>

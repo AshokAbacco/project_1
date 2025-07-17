@@ -22,6 +22,8 @@ import EmailValidator from './components/EmailValidator';
 import ValidEmailveri from './components/ValidEmailveri';
 import ApiValidationCards from './components/ApiValidationCards';
 import EmailPreview from './components/EmailPreview'
+import About from './pages/About';
+import ContactUs from './pages/ContactUs';
 function App() {
 
   return (
@@ -48,6 +50,9 @@ function App() {
         <Route path="/validemail" element={<ValidEmailveri/>}/>
         <Route path="/ApiValidationCards" element={<ApiValidationCards/>}/>
         <Route path="/EmailPreview" element={<EmailPreview/>}/>
+        <Route path="/about" element={<About/>}/>
+        <Route path="/contact" element={<ContactUs/>}/>
+
       </Routes>
     </BrowserRouter>
   );

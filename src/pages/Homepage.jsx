@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useEffect} from "react";
 import Navbar from "../components/Navbar";
 import { FaStar } from "react-icons/fa";
 import { FaCheck } from "react-icons/fa";
@@ -16,112 +16,127 @@ import Faq from "../components/Faq";
 import Footer from "../components/Footer";
 import SocialIcons from "../components/SocialIcons";
 import { Link } from "react-router-dom";
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+
 
 function Homepage() {
   
+   
+  useEffect(() => {
+    AOS.init({
+      duration: 1000, // animation duration (in ms)
+      once: true      // animation happens only once
+    });
+  }, []);
+
   return (
     <div>
       <Navbar />
       <div className="container home">
+        <div data-aos="fade-down"> 
         <div class="row">
-          <div className="col-md-5 home-img">
-            <div>
-              <img src="./images/logo-img.png.png" alt="" />
-              <FaStar color="gold" size={20} />
-              <FaStar color="gold" size={20} />
-              <FaStar color="gold" size={20} />
-              <FaStar color="gold" size={20} />
-            </div>
-
-            <div>
-              <h1>Simple, fast, and secure email validation service</h1>
-            </div>
-
-            <p>
-              Email Validation API: Clean Lists, Boost Deliverability & Maximize
-              ROI.Remove fake emails and spam users from your email lists.
-            </p>
-            <div className="home-check">
-              <FaCheck color="green" size={20} /> GDPR Compliant
-              <FaCheck color="green" size={20} /> 99.99% availability
-            </div>
-
-            <div className="home-btn">
-              <Link to="/email-validation" className="btn d-inline-flex ">
-                  Get started for free{" "}
-                  <HiArrowRight size={20} className="arrow-icon ms-2" color="white" />
-              </Link>
-              <p>Includes 50 free credits</p>
-              <img src="https://mails.so/images/illustrations/arrow.png" alt="" />
-            </div>
-          </div>
-
-          <div className="col-md-2"></div>
-
-          <div className="col-md-5">
-            <div class="home-card">
-              <div className="card-header">
-                <p>deo.schmoe@gmail.com</p>
-                <button type="button" className="btn">
-                  Validate{" "}
-                  <HiArrowRight
-                    size={20}
-                    className="arrow-icon"
-                    color="block"
-                  />{" "}
-                </button>
-              </div>
-              <div className="delivary">
-                <p className="deli">Deliverable</p>
-                <div className="deli-para">
-                  <h6>This address accepts email</h6>
-                  <p>
-                    The recipient's email server has confirmed its
-                    deliverability.
-                  </p>
-                </div>
-              </div>
+          
+            <div className="col-md-5 home-img">
               <div>
-                <p className="deli">Deliverable</p>
-                <h5 className="deli-para">This email address is valid</h5>
-
-                <div style={{marginLeft:'25px'}}>
-                  <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '5px', fontWeight: 'bold', fontSize: '14px' }}>
-                   
-                    <span>0</span>
-                    <span>25</span>
-                    <span>50</span>
-                    <span>75</span>
-                    <span>100</span>
-                  
-                  </div>
-                  <div className="progress" style={{ height: "10px" }}>
-                    <div
-                      className="progress-bar bg-success"
-                      style={{ width: "25%" }}
-                    ></div>
-                    <div
-                      className="progress-bar bg-info"
-                      style={{ width: "25%" }}
-                    ></div>
-                    <div
-                      className="progress-bar bg-warning"
-                      style={{ width: "25%" }}
-                    ></div>
-                    <div
-                      className="progress-bar bg-danger"
-                      style={{ width: "25%" }}
-                    ></div>
-                  </div>
-                </div>
-
+                <img src="./images/logo-img.png.png" alt="" />
+                <FaStar color="gold" size={20} />
+                <FaStar color="gold" size={20} />
+                <FaStar color="gold" size={20} />
+                <FaStar color="gold" size={20} />
               </div>
-               
-              <div class="card-body">
-                 <Uploadfile/>
+
+              <div>
+                <h1>Simple, fast, and secure email validation service</h1>
+              </div>
+
+              <p>
+                Email Validation API: Clean Lists, Boost Deliverability & Maximize
+                ROI.Remove fake emails and spam users from your email lists.
+              </p>
+              <div className="home-check">
+                <FaCheck color="green" size={20} /> GDPR Compliant
+                <FaCheck color="green" size={20} /> 99.99% availability
+              </div>
+
+              <div className="home-btn">
+                <Link to="/email-validation" className="btn d-inline-flex ">
+                    Get started for free{" "}
+                    <HiArrowRight size={20} className="arrow-icon ms-2" color="white" />
+                </Link>
+                <p>Includes 50 free credits</p>
+                <img src="https://mails.so/images/illustrations/arrow.png" alt="" />
               </div>
             </div>
-          </div>
+          
+            <div className="col-md-2"></div>
+           
+            <div className="col-md-5">
+              <div class="home-card">
+                <div className="card-header">
+                  <p>deo.schmoe@gmail.com</p>
+                  <button type="button" className="btn">
+                    Validate{" "}
+                    <HiArrowRight
+                      size={20}
+                      className="arrow-icon"
+                      color="block"
+                    />{" "}
+                  </button>
+                </div>
+                <div className="delivary">
+                  <p className="deli">Deliverable</p>
+                  <div className="deli-para">
+                    <h6>This address accepts email</h6>
+                    <p>
+                      The recipient's email server has confirmed its
+                      deliverability.
+                    </p>
+                  </div>
+                </div>
+                <div>
+                  <p className="deli">Deliverable</p>
+                  <h5 className="deli-para">This email address is valid</h5>
+
+                  <div style={{marginLeft:'25px'}}>
+                    <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '5px', fontWeight: 'bold', fontSize: '14px' }}>
+                    
+                      <span>0</span>
+                      <span>25</span>
+                      <span>50</span>
+                      <span>75</span>
+                      <span>100</span>
+                    
+                    </div>
+                    <div className="progress" style={{ height: "10px" }}>
+                      <div
+                        className="progress-bar bg-success"
+                        style={{ width: "25%" }}
+                      ></div>
+                      <div
+                        className="progress-bar bg-info"
+                        style={{ width: "25%" }}
+                      ></div>
+                      <div
+                        className="progress-bar bg-warning"
+                        style={{ width: "25%" }}
+                      ></div>
+                      <div
+                        className="progress-bar bg-danger"
+                        style={{ width: "25%" }}
+                      ></div>
+                    </div>
+                  </div>
+
+                </div>
+                
+                <div class="card-body">
+                  <Uploadfile/>
+                </div>
+              </div>
+            </div>
+           
+        </div>
         </div>
 
         {/* social media icons */}
@@ -131,10 +146,12 @@ function Homepage() {
       </div>
       
       {/* Cardscroling  */}
+    
       <div className="card-scroling">
           <Cardscroling/>
       </div>
 
+    <div data-aos="fade-up">
       <div className="Containair-fluid mails-so">
         <div className="mailso">
           <img src="./images/logo-img.png.png" alt="" /> 
@@ -186,6 +203,7 @@ function Homepage() {
         </div>
 
       </div>
+    </div>
 
       <div className="container load">
           <div className="text">
@@ -202,8 +220,9 @@ function Homepage() {
       </div>
 
       {/* usecases */}
+      <div data-aos="fade-up" data-aos-duration="1000">
        <div className=""> <Usecases/> </div>
-
+      </div>
       {/*  */}
       <div className="container-fluid new-mails">
         <img src="./images/logo-img.png.png" alt="" /> 
@@ -213,6 +232,7 @@ function Homepage() {
       </div>
 
       {/* intigration */}
+    <div data-aos="zoom-in"> 
       <div className="container intigration">
         <div className="row">
             <div className="col-md-5 logo-1"><img src="https://www.audox.com/zapier/wp-content/uploads/sites/12/2022/11/Screenshot-2022-11-26-at-12.57.39.png" alt="" className="w-100" /></div>
@@ -230,7 +250,7 @@ function Homepage() {
 
         </div>
       </div>
-
+    </div> 
       {/*Reliability  */}
       <div className="">
         <Reliability/>

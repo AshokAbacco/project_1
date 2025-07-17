@@ -59,7 +59,7 @@ function Dashboard() {
                 </li>
                 <li className="dropdown-item">Account</li>
                 <li className="dropdown-item">Settings</li>
-                <li className="dropdown-item">Logout</li>
+               <Link to="/"> <li className="dropdown-item">Logout</li></Link>
               </ul>
             </div>
         </div>

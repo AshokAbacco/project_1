@@ -1,7 +1,8 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
-
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 const services = [
   {
@@ -43,15 +44,25 @@ const services = [
 ];
 
 const Features = () => {
+    
+    useEffect(() => {
+      AOS.init({
+        duration: 1000, // animation duration (in ms)
+        once: true      // animation happens only once
+      });
+    }, []);
+
   return (
     <div className="">
         <Navbar/>
 
          <section className="hero-section">
         <div className="hero-content">
-          <h1>Powerful Email Validation</h1>
-          <p>Validate and clean your email list to boost your delivery rate and protect your sender reputation.</p>
-          <a href="#validate" className="hero-btn">Start Validating</a>
+          <div data-aos="zoom-in">
+              <h1>Powerful Email Validation</h1>
+              <p>Validate and clean your email list to boost your delivery rate and protect your sender reputation.</p>
+              <a href="#validate" className="hero-btn">Start Validating</a>
+          </div>
         </div>
       </section>
 

@@ -42,12 +42,31 @@
   display: flex;
   justify-content: space-between;
   padding-left: 120px;
-
+  
 }
 
 .nav-item
 {
   padding-left: 40px;
+  position: relative;
+  display: inline-block;
+  text-decoration: none;
+  color: #66001f;
+}
+.nav-item::after {
+  content: '';
+  position: absolute;
+  left: 50px;
+  bottom: -1px; /* adjust based on spacing */
+  width: 55%;
+  height: 2px;
+  background-color: currentColor;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease;
+}
+.nav-item:hover::after {
+  transform: scaleX(1);
 }
 .navbar .button  
 {

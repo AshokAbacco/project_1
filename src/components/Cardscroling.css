@@ -87,3 +87,312 @@
   opacity: 1;
 }
 
+/* about-page */
+.about
+{
+  background-color: antiquewhite;
+  padding: 120px;
+  
+}
+.text 
+{
+  padding: 10px;
+}
+.about-text h1
+{
+  font-weight: bolder;
+  font-size: 50px;
+   background: linear-gradient(
+    90deg,
+    rgb(141, 6, 46),
+    green,
+    rgb(0, 200, 150),
+    rgb(80, 0, 200),
+    rgb(30, 144, 255)
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text; /* For Firefox */
+  color: transparent;
+}
+.about-text h6
+{
+  color: rgb(141, 6, 46);
+  font-size: 25px;
+}
+.about-text h5
+{
+  font-weight: lighter;
+  font-size: 27px;
+
+}
+
+.what-is
+{
+  padding-top: 50px;
+}
+.what-info
+{
+  padding-top: 40px;
+  
+}
+.what-info h4
+{
+  padding-top: 20px;
+  padding-bottom: 30px;
+}
+
+.we-do 
+{
+  align-items: center;
+  text-align: center;
+  background-color: #f5f5f5;
+  padding-bottom: 20px;
+}
+.we-do img
+{
+  width: 120px;
+}
+.we-do h4
+{
+  padding-bottom: 20px;
+}
+
+/*  */
+.values-section {
+  padding: 50px 20px;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #fff;
+  background-image: url(https://mark43.com/wp-content/uploads/Blog_Cybersecurity.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+   
+}
+
+.values-container {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 1300px;
+  margin: 0 auto;
+  gap: 60px;
+}
+
+.image-container {
+  flex: 1 1 35%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.image-container img {
+  max-width: 120%;
+  height: 80%;
+ 
+  padding-top: 40px;
+}
+
+.text-container {
+  flex: 1 1 60%;
+}
+
+.text-container h2 {
+  font-size: 32px;
+  color: #fff;
+  margin-bottom: 30px;
+}
+
+.values-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  padding-top: 40PX;
+}
+
+.value-box h3 {
+  color: #fff;
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.value-box p {
+  font-size: 15px;
+  line-height: 1.6;
+  color: #fff;
+}
+
+.location
+{
+  background-color: #f5f5f5;
+
+}
+.location-1
+{
+  padding: 50px;
+}
+.location-name
+{
+  padding-top:50px ;
+}
+
+.location-1 img
+{
+  border-radius: 40px;
+}
+
+/* services */
+
+.services
+{
+  text-align: center;
+}
+
+.services-section {
+  padding: 60px 0;
+  background-color: #cf919121;
+}
+
+.service-box {
+  background: #fff;
+  border-radius: 10px;
+  padding: 30px;
+  text-align: center;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+  transition: 0.3s ease;
+  width: 300px;
+  gap: 4rem;
+  justify-content: space-between;
+}
+
+
+.service-box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+}
+
+.service-icon-1 {
+  font-size: 50px;
+  color: #810338;
+  margin-bottom: 15px;
+   
+}
+
+.btn-purple {
+  background-color: #a14ee0;
+  color: #fff;
+  border: none;
+}
+
+.btn-purple:hover {
+  background-color: #8d3ac2;
+}
+
+/* contact */
+.home-contact
+{
+  padding: 170px;
+  text-align: center;
+  background-image: url(https://www.tetratecheurope.com/wp-content/uploads/2024/05/Contact-Us-1.jpg);
+  background-repeat: no-repeat;
+  background-size: 100%;
+  color: #fff;
+}
+.home-contact h3
+{
+  font-size: 30px;
+  padding: 20px;
+}
+.home-contact .para
+{
+  font-size: 25px;
+}
+.contact-wrapper {
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.contact-section {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: space-between;
+}
+
+.contact-box {
+  background-color: #f4f3f9;
+  border-radius: 20px;
+  padding: 50px;
+  flex: 1 1 30%;
+  min-width: 280px;
+}
+
+.contact-box a {
+  color: #810338;
+  text-decoration: none;
+}
+
+.bottom-section {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 30px;
+  gap: 20px;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.address-box {
+  display: flex;
+  background-color: #f4f3f9;
+  border-radius: 20px;
+  padding: 20px;
+  align-items: center;
+  flex: 1 1 48%;
+}
+
+.address-box img {
+  border-radius: 15px;
+  margin-right: 15px;
+  width: 100px;
+  height: auto;
+}
+.follow-container {
+  margin: 20px 0;
+ 
+  flex: 1 1 48%;
+}
+
+.follow-container strong {
+  display: block;
+  margin-bottom: 10px;
+  font-size: 18px;
+  color: #333;
+}
+
+.icon-links {
+  display: flex;
+  gap: 12px; /* space between icons */
+  align-items: center;
+}
+
+.icon-links-1 {
+  font-size: 20px;
+  transition: transform 0.2s ease;
+  color: #810338;
+  padding-left: 50px;
+  
+}
+
+.icon-links-1 Link:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
+.icons-0
+{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  color: #810338;
+}

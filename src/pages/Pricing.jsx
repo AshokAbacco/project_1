@@ -1,6 +1,7 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Navbar from '../components/Navbar';
 import Price from '../components/Price';
+
 
 const plans = [
   {
@@ -122,30 +123,33 @@ function Pricing() {
       </div>
 
       {/* Plans Section */}
-      <div className="paidplans-container" style={{ backgroundColor: '#810034' }}>
-        {plans.map((plan, index) => (
-          <div
-            key={index}
-            className={`plan-card ${plan.darkCard ? 'dark' : ''} ${plan.mostPopular ? 'most-popular' : ''}`}
-            style={{ backgroundColor: 'rgb(179 0 55)' }}
-          >
-            {plan.mostPopular && <div className="badge">Most popular</div>}
-            <h4>{plan.name}</h4>
-            <div className="price-section">
-              {plan.oldPrice && <span className="old-price">{plan.oldPrice}</span>}
-              <span className="price text-light">{plan.price}</span>
-              {plan.perUser && <span className="per-user">per user<br />per month</span>}
-            </div>
-            <button className="get-started">Get started →</button>
-            <ul className="features">
-              {plan.features.map((feature, idx) => (
-                <li key={idx}>{feature}</li>
-              ))}
-            </ul>
-          </div>
-        ))}
-      </div>
-
+      
+        <div className="paidplans-container" style={{ backgroundColor: '#810034' }}>
+          {plans.map((plan, index) => (
+           
+              <div
+                key={index}
+                className={`plan-card ${plan.darkCard ? 'dark' : ''} ${plan.mostPopular ? 'most-popular' : ''}`}
+                style={{ backgroundColor: 'rgb(179 0 55)' }}
+              >
+                {plan.mostPopular && <div className="badge">Most popular</div>}
+                <h4>{plan.name}</h4>
+                <div className="price-section">
+                  {plan.oldPrice && <span className="old-price">{plan.oldPrice}</span>}
+                  <span className="price text-light">{plan.price}</span>
+                  {plan.perUser && <span className="per-user">per user<br />per month</span>}
+                </div>
+                <button className="get-started">Get started →</button>
+                <ul className="features">
+                  {plan.features.map((feature, idx) => (
+                    <li key={idx}>{feature}</li>
+                  ))}
+                </ul>
+              </div>
+             
+          ))}
+        </div>
+    
       {/* FAQ Section */}
             <Price/>
       {/* <div className="faq-container">

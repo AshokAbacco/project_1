@@ -86,18 +86,19 @@ const DashPricing = () => {
             expire.
           </p>
           <p className="custom-credit-input">
-            Enter a custom Credits
+            <span>Enter a custom Credits</span>
             <input
               type="number"
               value={selectedCredits}
               onChange={(e) => {
-                const customCredits = parseInt(e.target.value) || 0;
+                const customCredits = parseInt(e.target.value);
                 setSelectedCredits(customCredits);
                 setSelectedPrice(
                   parseFloat((customCredits * 0.009).toFixed(2))
                 );
               }}
               placeholder="Enter a custom amount"
+              
             />
           </p>
 
