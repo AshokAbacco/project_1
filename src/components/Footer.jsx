@@ -1,6 +1,6 @@
 import React from 'react'
 import { SiAmazonsimpleemailservice } from 'react-icons/si'
-
+import { Link } from 'react-router-dom'
 function Footer() {
   return (
     <div>
@@ -32,8 +32,9 @@ function Footer() {
                 </div>
                 <div className="col-md-2">
                   <h6>Legal</h6>
-                  <a href="">Privacy</a>
-                  <a href="">Terms</a>
+                  <Link to="">Privacy</Link>
+                  <Link to="">Terms</Link>
+                  <Link className="nav-link" to="/contact">Contact Us</Link>
                 </div>
             </div>
           </div>

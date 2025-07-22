@@ -1,8 +1,8 @@
+// src/App.jsx
 import React from 'react';
-import { Routes, Route } from 'react-router-dom';
+import { Routes, Route, BrowserRouter } from 'react-router-dom';
 import Homepage from './pages/Homepage';
 import ListValidation from './pages/ListValidation';
-import { BrowserRouter } from 'react-router-dom';
 import SignIn from './components/SignIn';
 import Signup from './components/Signup';
 import Features from './pages/Features';
@@ -21,13 +21,16 @@ import IntegraZapier from './components/IntegraZapier';
 import EmailValidator from './components/EmailValidator';
 import ValidEmailveri from './components/ValidEmailveri';
 import ApiValidationCards from './components/ApiValidationCards';
-import EmailPreview from './components/EmailPreview'
+import EmailPreview from './components/EmailPreview';
 import About from './pages/About';
 import ContactUs from './pages/ContactUs';
-function App() {
+import Integrations from './pages/Integrations'
+ 
 
+function App() {
   return (
     <BrowserRouter>
+ 
       <Routes>
         <Route path="/" element={<Homepage />} />
         <Route path="/list-validation" element={<ListValidation />} />
@@ -42,17 +45,18 @@ function App() {
         <Route path="/wermup" element={<DashWarmup />} />
         <Route path="/tools" element={<DashTools />} />
         <Route path="/integrations" element={<DashIntegrations />} />
-        <Route path="/api" element={<DashbordApi/>} />
-        <Route path="/usage" element={<DashUsage/>} />
-        <Route path="/pricing-plan" element={<DashPricing/>} />
-        <Route path="/zapire" element={<IntegraZapier/>} />
-        <Route path="/email-validation" element={<EmailValidator/>} />
-        <Route path="/validemail" element={<ValidEmailveri/>}/>
-        <Route path="/ApiValidationCards" element={<ApiValidationCards/>}/>
-        <Route path="/EmailPreview" element={<EmailPreview/>}/>
-        <Route path="/about" element={<About/>}/>
-        <Route path="/contact" element={<ContactUs/>}/>
-
+        <Route path="/api" element={<DashbordApi />} />
+        <Route path="/usage" element={<DashUsage />} />
+        <Route path="/pricing-plan" element={<DashPricing />} />
+        <Route path="/zapire" element={<IntegraZapier />} />
+        <Route path="/email-validation" element={<EmailValidator />} />
+        <Route path="/validemail" element={<ValidEmailveri />} />
+        <Route path="/ApiValidationCards" element={<ApiValidationCards />} />
+        <Route path="/EmailPreview" element={<EmailPreview />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/contact" element={<ContactUs />} />
+        <Route path="/Integrat" element={<Integrations />} />
+         
       </Routes>
     </BrowserRouter>
   );

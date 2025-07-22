@@ -1,8 +1,12 @@
-import React from "react";
+import React, { useContext } from "react";
 import { SiAmazonsimpleemailservice } from "react-icons/si";
 import { Link } from 'react-router-dom';
 
+ 
+
+
 const Navbar = () => {
+     
   return (
     <div>
       <nav className="navbar navbar-expand-lg ">
@@ -50,8 +54,8 @@ const Navbar = () => {
               </Link>
               </li>
               <li className="nav-item">
-                <Link className="nav-link" to="/contact">
-                    Contact Us
+                <Link className="nav-link" to="/Integrat">
+                    Integrations
               </Link>
               </li>
             </ul>
@@ -64,6 +68,7 @@ const Navbar = () => {
             
           </div>
         </div>
+         
       </nav>
     </div>
   );

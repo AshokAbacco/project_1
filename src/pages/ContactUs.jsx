@@ -34,7 +34,7 @@ function ContactUs() {
           <div className="contact-box">
             <strong>For data protection & legal related inquiries:</strong>
             <br />
-            <a href="mailto:snovio_dpo@snov.io">snovio_dpo@inbox.com</a>
+            <a href="mailto:snovio_dpo@snov.io">inbox_dpo@inbox.com</a>
           </div>
         </div>
       </div>
