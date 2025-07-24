@@ -62,10 +62,10 @@ body {
 
 .navbar .collapse
 {
-  margin-left: 300px;
+  margin-left: 100px;
   display: flex;
   justify-content: space-between;
-  padding-left: 120px;
+  padding-left: 100px;
   
 }
 

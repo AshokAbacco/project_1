@@ -70,7 +70,6 @@ const Navbar = () => {
                <button type="button" className="btn" >Login</button>
              </Link>
              <Link to="/signup"><button type="button" className="btn bt-1" >Sign Up</button></Link>
-            
           </div>
 
            {/* <button onClick={() => setDarkMode(!darkMode)}>
