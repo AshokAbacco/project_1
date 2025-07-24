@@ -245,7 +245,6 @@ const Integrations = () => {
                       </div>
                       
                       
-                      
                       {integration.connected ? (
                         <button className="btn btn-success btn-lg w-100 d-flex align-items-center justify-content-center">
                           <CheckCircle size={20} className="me-2" />

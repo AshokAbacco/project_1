@@ -1,12 +1,17 @@
 import React, { useContext } from "react";
 import { SiAmazonsimpleemailservice } from "react-icons/si";
 import { Link } from 'react-router-dom';
-
+import { ThemeContext } from "../pages/ThemeContext";
  
 
 
 const Navbar = () => {
-     
+   const context = useContext(ThemeContext);
+       if (!context) {
+    return null;  
+  }
+   const { darkMode, setDarkMode } = context;
+   
   return (
     <div>
       <nav className="navbar navbar-expand-lg ">
@@ -67,6 +72,10 @@ const Navbar = () => {
              <Link to="/signup"><button type="button" className="btn bt-1" >Sign Up</button></Link>
             
           </div>
+
+           {/* <button onClick={() => setDarkMode(!darkMode)}>
+            {darkMode ? '☀️  ' : '🌙  '}
+          </button> */}
         </div>
          
       </nav>

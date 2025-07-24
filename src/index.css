@@ -1,3 +1,27 @@
+ 
+body {
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.bg-dark {
+  background-color: #121212 !important;
+}
+
+.text-light {
+  color: #ffffff !important;
+}
+
+.bg-white {
+  background-color: #ffffff !important;
+}
+
+.text-dark {
+  color: #000000 !important;
+}
+
+/* Optional: Adjust other element-specific styling for dark mode if needed */
+
+ 
 .navbar{
   background-color: white;
   padding: 20px;

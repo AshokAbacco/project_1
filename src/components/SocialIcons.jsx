@@ -31,7 +31,7 @@ const SocialIcons = () => {
         {isOpen ? '×' : '+'}
       </div> */}
       <div className="toggle-button" onClick={toggleIcons}>
-        <i className="bi bi-chat-left-dots-fill" style={{ marginRight: '1px' }}></i>
+        <i className="bi bi-share-fill" style={{ marginRight: '1px' }}></i>
         {isOpen ? '' : ''}
       </div>
 

@@ -1,4 +1,4 @@
-import React, {useEffect} from "react";
+import React, {useEffect, useContext } from "react";
 import Navbar from "../components/Navbar";
 import { FaStar } from "react-icons/fa";
 import { FaCheck } from "react-icons/fa";
@@ -18,7 +18,8 @@ import SocialIcons from "../components/SocialIcons";
 import { Link } from "react-router-dom";
 import AOS from 'aos';
 import 'aos/dist/aos.css';
-
+ 
+import { ThemeContext } from "./ThemeContext"; // Import the ThemeContext
 
 function Homepage() {
   
@@ -29,9 +30,10 @@ function Homepage() {
       once: true      // animation happens only once
     });
   }, []);
+    const { darkMode } = useContext(ThemeContext);
 
   return (
-    <div>
+    <div className={darkMode ? 'bg-dark text-light' : 'bg-white text-dark'}>
       <Navbar />
       <div className="container home">
         <div data-aos="fade-down"> 
@@ -71,7 +73,7 @@ function Homepage() {
           
             <div className="col-md-2"></div>
            
-            <div className="col-md-5">
+            <div className="col-md-5 pt-5">
               <div class="home-card">
                 <div className="card-header">
                   <p>deo.schmoe@gmail.com</p>
